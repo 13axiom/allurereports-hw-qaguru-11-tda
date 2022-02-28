@@ -45,7 +45,7 @@ public class GithubSteps {
         $(".d-flex.hx_hit-user.px-0.Box-row").$(byText(user)).click();
         String currentUrl = getWebDriver().getCurrentUrl();
         assertTrue(currentUrl.equals("https://github.com/" + user));
-}
+    }
 
     @Step("Переходим ко вкладке \"Repositories\"")
     public void goToUserWidgetRepo() {
@@ -61,8 +61,8 @@ public class GithubSteps {
     @Step("Переходим в найденный репозиторий")
     public void goToUserRepo(String userRepo, String user) {
         $("[data-filterable-for=your-repos-filter]").$(byText(userRepo)).click();
-        String currentUrl=getWebDriver().getCurrentUrl();
-        assertTrue(currentUrl.equals("https://github.com/"+user+"/"+userRepo));
+        String currentUrl = getWebDriver().getCurrentUrl();
+        assertTrue(currentUrl.equals("https://github.com/" + user + "/" + userRepo));
     }
 
     @Step("Переходим ко вкладке \"Issue\"")

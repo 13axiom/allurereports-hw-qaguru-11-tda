@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class FindIssueSimpleListenerExampleTest {
 
     @Test
-    public void findFullIssueName(){
+    public void findFullIssueName() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("https://github.com");

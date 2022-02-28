@@ -90,7 +90,7 @@ public class FindIssueLambdaExampleTest {
 
         step("Ищем issue c неймингом \"" + issueName + "\"", () -> {
             $$(".js-issue-row").findBy(text(issueName)).shouldHave(text(issueName));
-takeScreenshot();
+            takeScreenshot();
         });
     }
 }

@@ -31,8 +31,8 @@ public class FindIssueAnnotatedExampleTest {
     public void findFullIssueName() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-            Allure.parameter("user", "DmitriyTQC");
-            Allure.parameter("userRepository", "allurereports-hw-qaguru-11-tda");
+        Allure.parameter("user", "DmitriyTQC");
+        Allure.parameter("userRepository", "allurereports-hw-qaguru-11-tda");
         Allure.parameter("issueName", "in_name: кириллица && symbols like '%Iñtërnâtiônàlizætiøn'");
 
         steps.searchByUser(user);
