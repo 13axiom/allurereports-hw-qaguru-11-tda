@@ -74,16 +74,10 @@ public class GithubSteps {
     public void chechNameOfIssue(String issueName) {
         $$(".js-issue-row").findBy(text(issueName)).shouldHave(text(issueName));
         takeScreenshot();
-        attPageSource();
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
     public byte[] takeScreenshot() {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
-
-    public void attPageSource() {
-        addAttachment("Page Source", "text/html", WebDriverRunner.source(), "html");
-    }
-
 }
