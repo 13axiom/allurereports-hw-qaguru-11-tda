@@ -73,11 +73,7 @@ public class GithubSteps {
     @Step("Ищем issue c неймингом \"{issueName}\"")
     public void chechNameOfIssue(String issueName) {
         $$(".js-issue-row").findBy(text(issueName)).shouldHave(text(issueName));
-        takeScreenshot();
     }
 
-    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
-        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
+
 }

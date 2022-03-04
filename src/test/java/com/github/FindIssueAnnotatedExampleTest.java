@@ -19,7 +19,6 @@ public class FindIssueAnnotatedExampleTest {
     @DisplayName("Preconditions")
     void preconditions() {
         steps.openMainPage();
-        steps.clearBrowser();
     }
 
 
